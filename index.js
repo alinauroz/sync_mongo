@@ -1,12 +1,15 @@
 const express = require("express");
 require('dotenv').config();
 
+const integration = {};
+integration.register = require("./integration/register");
+
 const app = express();
 
 app.get("/register", async (req, res) => {
     try {
 
-        
+        console.log(req.query)
 
         res.send({msg: "ok"})
     }
