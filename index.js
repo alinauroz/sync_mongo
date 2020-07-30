@@ -6,10 +6,15 @@ integration.register = require("./integration/register");
 
 const app = express();
 
+let data = [];
+
 app.get("/register", async (req, res) => {
     try {
+        let data = req.query.d;
 
-        console.log(req.query)
+        if (! data) return res.send({err: "no data"});
+
+        let content = data.fullDocument;
 
         res.send({msg: "ok"})
     }
