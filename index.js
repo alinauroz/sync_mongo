@@ -15,7 +15,7 @@ app.get("/register", async (req, res) => {
         if (! data) return res.send({err: "no data"});
 
         let content = data.fullDocument;
-
+        console.log(content)
         integration.register.sace(content);
 
         res.send({msg: "ok"})
