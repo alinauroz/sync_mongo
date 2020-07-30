@@ -15,6 +15,7 @@ var connection,db;
 ( async () => {
     connection = await MongoClient.connect(url);
     db = await connection.db(dbName);
+    console.log("connected")
 })()
 
 const save = async data => {
