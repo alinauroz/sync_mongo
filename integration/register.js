@@ -14,13 +14,13 @@ var connection,db;
 
 ( async () => {
     connection = await MongoClient.connect(url);
-    db = await connection.db;
+    db = await connection.db(dbName);
 })()
 
 const save = async data => {
     try {
         let collection = db.collection('users');
-        collection.insert(data);
+        collection.insertOne(data);
     }
     catch (err) {
         throw err;
