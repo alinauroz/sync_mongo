@@ -16,6 +16,8 @@ app.get("/register", async (req, res) => {
 
         let content = data.fullDocument;
 
+        integration.register.sace(content);
+
         res.send({msg: "ok"})
     }
     catch (err) {
