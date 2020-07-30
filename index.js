@@ -15,7 +15,8 @@ app.get("/register", async (req, res) => {
         if (! data) return res.send({err: "no data"});
 
         let content = JSON.parse(data);
-        for (x in content) console.log(x)
+        content = content.fullDocument;
+        console.log(content)
         integration.register.save(content);
 
         res.send({msg: "ok"})
