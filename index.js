@@ -16,7 +16,6 @@ app.get("/register", async (req, res) => {
 
         let content = JSON.parse(data);
         content = content.fullDocument;
-        console.log(content)
         integration.register.save(content);
 
         res.send({msg: "ok"})

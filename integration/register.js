@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 
 const dbName = 'Clone';
-const url = "mongodb+srv://admin:abcd1234@cluster0-9zuvz.mongodb.net";
+const url = "mongodb+srv://atlasadmin1:4Smash@mongoec2.chkg1.mongodb.net/"
 var connection,db;
 
 //MongoClient.connect(url, function(err, client) {
