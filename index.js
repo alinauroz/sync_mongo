@@ -26,4 +26,4 @@ app.get("/register", async (req, res) => {
     }
 });
 
-app.listen(process.env.PORT || 3007);
+app.listen(process.env.PORT || 3000);
